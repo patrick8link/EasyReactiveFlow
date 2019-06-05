@@ -1,0 +1,42 @@
+{
+    "flow": [
+        {
+            "flow-name": "FlowS", 
+            "id": 90, 
+            "instructions": {
+                "instruction": [
+                    {
+                        "go-to-table": {
+                            "table_id": 1
+                        }, 
+                        "order": 0
+                    },
+					{
+						"order": 1,
+						"apply-actions": {
+                            "action": [
+                                {
+                                    "order": 0, 
+									"output-action": {
+										"output-node-connector": "CONTROLLER",
+										"max-length" : 65535
+									}
+									
+                                }
+                            ]
+                        }
+					}
+                ]
+            }, 
+            "match": {
+                "ethernet-match": {
+                    "ethernet-type": {
+                        "type": 2054
+                    }
+                }
+            }, 
+            "priority": 100, 
+            "table_id": 0
+        }
+    ]
+}

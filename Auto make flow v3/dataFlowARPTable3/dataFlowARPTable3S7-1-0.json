@@ -1,0 +1,35 @@
+{
+    "flow": [
+        {
+            "flow-name": "FlowARP1", 
+            "id": 1, 
+            "instructions": {
+                "instruction": [
+                    {
+                        "apply-actions": {
+                            "action": [
+                                {
+                                    "order": 0, 
+                                    "output-action": {
+                                        "output-node-connector": 2
+                                    }
+                                }
+                            ]
+                        }, 
+                        "order": 0
+                    }
+                ]
+            }, 
+            "match": {
+                "arp-target-transport-address": "40.0.0.8/32", 
+                "ethernet-match": {
+                    "ethernet-type": {
+                        "type": 2054
+                    }
+                }
+            }, 
+            "priority": 100, 
+            "table_id": 3
+        }
+    ]
+}

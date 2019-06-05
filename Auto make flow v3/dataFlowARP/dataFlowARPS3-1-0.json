@@ -1,0 +1,29 @@
+{
+    "flow": [
+        {
+            "flow-name": "FlowARP1", 
+            "id": 6, 
+            "instructions": {
+                "instruction": [
+                    {
+                        "go-to-table": {
+                            "table_id": 4
+                        }, 
+                        "order": 0
+                    }
+                ]
+            }, 
+            "match": {
+                "arp-source-transport-address": "10.0.0.1/32", 
+                "arp-target-transport-address": "10.0.0.254/32", 
+                "ethernet-match": {
+                    "ethernet-type": {
+                        "type": 2054
+                    }
+                }
+            }, 
+            "priority": 100, 
+            "table_id": 1
+        }
+    ]
+}

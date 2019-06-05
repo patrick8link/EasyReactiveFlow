@@ -1,0 +1,41 @@
+{
+    "flow": [
+        {
+            "flow-name": "FlowIP2", 
+            "id": 3, 
+            "instructions": {
+                "instruction": [
+                    {
+                        "apply-actions": {
+                            "action": [
+                                {
+                                    "order": 0, 
+                                    "set-dl-dst-action": {
+                                        "address": "00:00:00:00:00:05"
+                                    }
+                                }, 
+                                {
+                                    "order": 1, 
+                                    "output-action": {
+                                        "output-node-connector": 3
+                                    }
+                                }
+                            ]
+                        }, 
+                        "order": 0
+                    }
+                ]
+            }, 
+            "match": {
+                "ethernet-match": {
+                    "ethernet-type": {
+                        "type": 2048
+                    }
+                }, 
+                "ipv4-destination": "20.0.0.5/32"
+            }, 
+            "priority": 10, 
+            "table_id": 2
+        }
+    ]
+}
